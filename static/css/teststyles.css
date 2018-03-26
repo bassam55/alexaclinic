@@ -1,0 +1,29 @@
+body {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); */
+  font-family: Snellen;
+}
+.letterdiv{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+}
+.rowdiv{
+  position: absolute;
+  font-family: serif;
+  top: 36%;
+  font-size: 50px;
+  padding-left: 4%;
+}
+@font-face {
+    font-family: "Snellen";
+    src: url('Snellen.ttf') format('embedded-opentype'),
+    url('Snellen.ttf') format('opentype');
+}
+table, th, td {
+  border: 1px solid black
+}

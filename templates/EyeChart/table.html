@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static "css/table.css" %}">
+    <title></title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        {% if table %}
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Alexa_OS</th>
+      <th>Alexa_OD</th>
+      <th>Alexa_OU</th>
+      <th>Human_OS</th>
+      <th>Human_OD</th>
+      <th>Human_OU</th>
+    </thead>
+    {% for patient in table %}
+    <tr>
+      <td> {{ patient.id }}</td>
+      <td>{{ patient.patient_name }}</td>
+      <td>{{ patient.patient_age }}</td>
+      <td> {{ patient.AL_OS }}</td>
+      <td>{{ patient.AL_OD }}</td>
+      <td>{{ patient.AL_OU }}</td>
+      <td> {{ patient.H_OS }}</td>
+      <td>{{ patient.H_OD }}</td>
+      <td>{{ patient.H_OU }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% endif %}
+  </body>
+</html>
